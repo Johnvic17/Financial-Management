@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #cedce2;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+body {
+    background-color: #cedce2;
+    overflow-x: hidden;
+}
+
+#navbar {
+    width: 100%;
+    max-width: 100%;
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #cedce2;
+    overflow: hidden;
+}
+
+.logoUniverso {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 60px 20px 40px;
+}
+
+.logoUniverso img {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+}
+
+.intro-text {
+    width: 75%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* BOTÕES DO FOOTER */
+
+.footer-btn {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border-radius: 8px;
+
+    background-color: #54456b;
+    color: white;
+    border: 1px solid #0d6efd;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.footer-btn:hover {
+    background-color: #54456b;
+    color: white;
+}
+
+.footer-btn:focus,
+.footer-btn:active {
+    background-color: #54456b;
+    color: white;
+    box-shadow: none;
+}
+
+.footer-btn i {
+    font-size: 20px;
+}
+
+.footer-copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 576px) {
+
+    main {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    section {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .logoUniverso img {
+        width: 100%;
+        height: auto;
+    }
+
+    .intro-text {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .intro-text.fs-5 {
+        font-size: 1rem !important;
+        line-height: 1.5;
+    }
+
+    .text-center p {
+        margin-bottom: 20px;
+    }
+}
