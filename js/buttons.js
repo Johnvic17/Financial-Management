@@ -55,12 +55,19 @@ document.addEventListener("click", (e) => {
             );
             break;
 
+        case "503020":
+            window.location.href = new URL(
+                "pages/503020/503020.html",
+                projectRoot
+            );
+            break;
+
         case "home":
             window.location.href = new URL(
                 "index.html",
                 projectRoot
             );
-            break;
+            break;        
 
         default:
             console.warn("Ação não tratada:", action);
