@@ -13,14 +13,18 @@ body {
 }
 
 body {
-    background-color: #cfdbe1;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-main {
+main {    
     flex: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #cfdbe1;
 }
 
 html {
@@ -31,13 +35,6 @@ html {
 #navbar {
     width: 100%;
     max-width: 100%;
-}
-
-main {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 section {
