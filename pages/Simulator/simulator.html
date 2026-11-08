@@ -38,15 +38,31 @@
                                     <!-- Renda é obrigatória (required). Os outros campos são opcionais -->
                                     <div class="mb-3">
                                         <label for="renda" class="form-label">Renda Mensal</label>
-                                        <input type="number" class="form-control" id="renda" min="0" step="0.01" required>
+                                        <input type="number" class="form-control" id="renda" min="0" step="0.01"
+                                            required>
                                     </div>
                                     <!-- Os outros 3 campos (necessidades, desejos e poupança) seguem o mesmo padrão -->
+
+                                    
+                                    <div class="mb-3">
+                                        <label for="necessidades" class="form-label">Total gasto com
+                                            Necessidades</label>
+                                        <input type="number" class="form-control" id="necessidades" min="0" step="0.01">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="desejos" class="form-label">Total gasto com Desejos</label>
+                                        <input type="number" class="form-control" id="desejos" min="0" step="0.01">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="poupanca" class="form-label">Valor destinado à Poupança</label>
+                                        <input type="number" class="form-control" id="poupanca" min="0" step="0.01">
+                                    </div>
 
                                     <!-- type="submit" dispara o evento de envio do formulário, que o simulator.js usa -->
                                     <button type="submit" class="btn btn-primary w-100" id="calcular">Calcular</button>
                                 </div>
 
-                                <!-- Divisória: a linha vertical (vr) só aparece no desktop e a horizontal (hr) só no celular -->
+                                <!-- Divisória: vertical no desktop, horizontal no mobile -->
                                 <div class="vr d-none d-lg-block opacity-50"></div>
                                 <hr class="d-lg-none my-0 opacity-50">
 
@@ -64,11 +80,16 @@
             </div>
         </section>
 
+        <!--
+        -->
+        <!-- Aqui o JavaScript vai inserir o rodapé -->
         <div id="footer"></div>
     </main>
 
-    <!-- Scripts: botões, carregamento da navbar e do footer, e Bootstrap -->
+    <!-- simulator.js é carregado só nesta página, pois é ele que faz o cálculo -->
     <script src="../../js/simulator.js"></script>
+
+    <!-- Scripts: botões, carregamento da navbar e do footer, e Bootstrap -->  
     <script src="../../js/buttons.js"></script>
     <script src="../../js/NavbarLoader.js"></script>
     <script src="../../js/FooterLoader.js"></script>
