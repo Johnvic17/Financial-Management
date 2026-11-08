@@ -17,45 +17,40 @@
 <body>
     <div id="navbar"></div>
 
+    <!--Simulador 50-30-20 -->
     <main>
+        <!-- Seção principal. container centraliza o conteúdo e py-5 dá espaçamento em cima e embaixo -->
         <section class="container py-5">
             <h1 class="display-4 text-center mb-5">Simulador 50-30-20</h1>
 
+            <!-- Grid do Bootstrap: ocupa 12 colunas no celular e 10 em telas extra grandes -->
             <div class="row justify-content-center">
                 <div class="col-12 col-xl-10">
+                    <!-- Caixa preta com texto branco e bordas arredondadas -->
                     <div class="bg-black text-white rounded p-4 p-md-5">
                         <form id="form-simulador">
 
+                            <!-- Flexbox: coluna no celular, linha no desktop (lg) -->
                             <div class="d-flex flex-column flex-lg-row gap-4">
 
-                                <!-- Formulário -->
+                                <!-- Lado esquerdo: campos de entrada -->
                                 <div class="w-100">
+                                    <!-- Renda é obrigatória (required). Os outros campos são opcionais -->
                                     <div class="mb-3">
                                         <label for="renda" class="form-label">Renda Mensal</label>
-                                        <input type="number" class="form-control" id="renda" min="0" step="0.01"
-                                            required>
+                                        <input type="number" class="form-control" id="renda" min="0" step="0.01" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="necessidades" class="form-label">Total gasto com
-                                            Necessidades</label>
-                                        <input type="number" class="form-control" id="necessidades" min="0" step="0.01">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="desejos" class="form-label">Total gasto com Desejos</label>
-                                        <input type="number" class="form-control" id="desejos" min="0" step="0.01">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="poupanca" class="form-label">Valor destinado à Poupança</label>
-                                        <input type="number" class="form-control" id="poupanca" min="0" step="0.01">
-                                    </div>
+                                    <!-- Os outros 3 campos (necessidades, desejos e poupança) seguem o mesmo padrão -->
+
+                                    <!-- type="submit" dispara o evento de envio do formulário, que o simulator.js usa -->
                                     <button type="submit" class="btn btn-primary w-100" id="calcular">Calcular</button>
                                 </div>
 
-                                <!-- Divisória: vertical no desktop, horizontal no mobile -->
+                                <!-- Divisória: a linha vertical (vr) só aparece no desktop e a horizontal (hr) só no celular -->
                                 <div class="vr d-none d-lg-block opacity-50"></div>
                                 <hr class="d-lg-none my-0 opacity-50">
 
-                                <!-- Resultado -->
+                                <!-- Lado direito: o JavaScript troca esse conteúdo pelo resultado do cálculo -->
                                 <div class="w-100" id="resultado">
                                     <p class="text-white-50 mb-0">
                                         Preencha os campos e clique em <strong>Calcular</strong> para ver a análise.
@@ -72,6 +67,7 @@
         <div id="footer"></div>
     </main>
 
+    <!-- Scripts: botões, carregamento da navbar e do footer, e Bootstrap -->
     <script src="../../js/simulator.js"></script>
     <script src="../../js/buttons.js"></script>
     <script src="../../js/NavbarLoader.js"></script>

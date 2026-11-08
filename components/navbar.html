@@ -1,12 +1,24 @@
+<!-- Navbar do Bootstrap: navbar-expand-lg faz o menu aparecer completo no desktop e virar "hambúrguer" no celular.
+     data-bs-theme="dark" ativa o tema escuro -->
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <!-- Nome do site (clicável). O data-action="home" é lido pelo buttons.js para ir à página inicial.
+             O href vazio é só para o link parecer clicável, pois o JS cancela o comportamento padrão -->
         <a class="navbar-brand ms-4 text-white fw-bold" data-action="home" href="">AF - Educação Financeira</a>
+
+        <!-- Botão hambúrguer: só aparece no celular. O data-bs-toggle="collapse" faz ele abrir/fechar
+             o menu que tem o id #navbarNavAltMarkup (apontado no data-bs-target) -->
         <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon text-white"></span>
         </button>
+
+        <!-- Parte do menu que recolhe no celular (collapse) -->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-3 ">
+            <!-- Cada link usa data-action para o buttons.js redirecionar para a página certa.
+                 Os links seguem o mesmo padrão, mudando só o data-action e o texto -->
             <a class="nav-item nav-link text-white fw-bold" data-action="whatIs" href="">O que é?</a>
             <a class="nav-item nav-link text-gray" data-action="organization" href="">Organização</a>
+            <!-- Reservas, Regras, Dicas, Simulador e Regra 50-30-20 ... -->
             <a class="nav-item nav-link text-gray" data-action="reserve" href="">Reservas</a>
             <a class="nav-item nav-link text-gray" data-action="rule" href="">Regras</a>            
             <a class="nav-item nav-link text-gray" data-action="tips" href="">Dicas</a>
